@@ -17,6 +17,7 @@
 		538183981D907C9300F8E72A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5381838B1D907C7D00F8E72A /* Alamofire.framework */; };
 		538183991D907C9300F8E72A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5381838B1D907C7D00F8E72A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5381839E1D907D1C00F8E72A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5381839D1D907D1C00F8E72A /* Router.swift */; };
+		538183A11D90A61900F8E72A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183A01D90A61900F8E72A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		538183731D907A9900F8E72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5381837F1D907C7C00F8E72A /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		5381839D1D907D1C00F8E72A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		538183A01D90A61900F8E72A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		538183501D907A9900F8E72A /* perception_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5381839F1D90A60D00F8E72A /* Models */,
 				538183511D907A9900F8E72A /* AppDelegate.swift */,
 				538183531D907A9900F8E72A /* ViewController.swift */,
 				538183551D907A9900F8E72A /* Main.storyboard */,
@@ -215,6 +218,14 @@
 				538183971D907C7D00F8E72A /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5381839F1D90A60D00F8E72A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				538183A01D90A61900F8E72A /* User.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538183A11D90A61900F8E72A /* User.swift in Sources */,
 				538183541D907A9900F8E72A /* ViewController.swift in Sources */,
 				5381839E1D907D1C00F8E72A /* Router.swift in Sources */,
 				538183521D907A9900F8E72A /* AppDelegate.swift in Sources */,

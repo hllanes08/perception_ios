@@ -14,12 +14,14 @@ enum TodoRouter:  URLRequestConvertible {
     static let baseURL = URL(string: "http://localhost:8100/api")
     
     case Items
-    
+    case Login(user)
     
     var route : (path: String, parameters: [String: AnyObject]?) {
         switch self {
         case .Items:
             return ("/items/",nil)
+        case .Login(User):
+            return ("auth/authorize/", ["username": User.name, "password": User.password])
         }
     }
     var url : URL! { return TodoRouter.baseURL?.appendingPathComponent(route.path) }
