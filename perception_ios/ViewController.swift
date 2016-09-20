@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 class ViewController: UIViewController {
     
     @IBOutlet weak var txtUsername: UITextField!
@@ -17,10 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        // let user = User(username: "", password: "", email: "" )
-       // Alamofire.request(TodoRouter.Login(user))
-       // .responseJSON { (response) in
-       //     debugPrint(response)
-      //  }
+       
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -34,9 +32,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickLogin(_ sender: AnyObject) {
-        var username = txtUsername.text
-        var password = txtPassword.text
-        var user = User(username,password)
+        let username:String = txtUsername.text as String!
+        let password:String = txtPassword.text as String!
+        var user = User(username: username, password: password)
+         Alamofire.request(TodoRouter.Login(user))
+         .responseJSON { (response) in
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON:\(json["token"])")
+                }
+            case .failure(let error):
+                print(error)
+            }
+          }
         
     }
 }
