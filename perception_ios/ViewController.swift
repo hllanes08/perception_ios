@@ -7,11 +7,16 @@
 //
 
 import UIKit
-
+import Alamofire
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = User(username: "", password: "", email: "" )
+        Alamofire.request(TodoRouter.Login(user))
+        .responseJSON { (response) in
+            debugPrint(response)
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
