@@ -40,7 +40,17 @@ class ViewController: UIViewController {
             switch response.result {
             case .success:
                 if let value = response.result.value {
-                    user.parse(json: value)
+                     let has_errors = JSON(value)["non_field_errors"].exists()
+                    if !has_errors {
+                        user.parse(json: value)
+                    }
+                    else {
+                        let alertError = UIAlertController(title: "Login Failed", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
+                        let cancelAction = UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel) { (action) in
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                        alertError.addAction(cancelAction)
+                    }
                 }
             case .failure(let error):
                 print(error)
