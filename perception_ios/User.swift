@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class User {
     
@@ -35,5 +36,10 @@ class User {
     }
     func getPassword() -> String {
         return self.password
+    }
+    func parse(json: Any? ){
+        let values = JSON(json)
+        self.auht_token = values["token"].stringValue
+
     }
 }

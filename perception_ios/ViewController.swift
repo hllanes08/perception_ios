@@ -40,8 +40,7 @@ class ViewController: UIViewController {
             switch response.result {
             case .success:
                 if let value = response.result.value {
-                    let json = JSON(value)
-                    print("JSON:\(json["token"])")
+                    user.parse(json: value)
                 }
             case .failure(let error):
                 print(error)
