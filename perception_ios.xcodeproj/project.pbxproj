@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		537F71EF1D9F030B007BD60A /* perception.png in Resources */ = {isa = PBXBuildFile; fileRef = 537F71EE1D9F030B007BD60A /* perception.png */; };
 		538183521D907A9900F8E72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183511D907A9900F8E72A /* AppDelegate.swift */; };
 		538183541D907A9900F8E72A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183531D907A9900F8E72A /* ViewController.swift */; };
 		538183571D907A9900F8E72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538183551D907A9900F8E72A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 		538183A11D90A61900F8E72A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183A01D90A61900F8E72A /* User.swift */; };
 		53D97F9C1D9C8374005602C0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D97F8F1D9C8366005602C0 /* SwiftyJSON.framework */; };
 		53D97F9D1D9C8374005602C0 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53D97F8F1D9C8366005602C0 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53E653D61D9DF85800C53B15 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E653D51D9DF85800C53B15 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		537F71EE1D9F030B007BD60A /* perception.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perception.png; sourceTree = "<group>"; };
 		5381834E1D907A9800F8E72A /* perception_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perception_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538183511D907A9900F8E72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		538183531D907A9900F8E72A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 		5381839D1D907D1C00F8E72A /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		538183A01D90A61900F8E72A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53D97F841D9C8365005602C0 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		53E653D51D9DF85800C53B15 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		537F71DE1D9EE935007BD60A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				537F71EE1D9F030B007BD60A /* perception.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		538183451D907A9800F8E72A = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +250,7 @@
 		538183501D907A9900F8E72A /* perception_ios */ = {
 			isa = PBXGroup;
 			children = (
+				537F71DE1D9EE935007BD60A /* Images */,
 				5381839F1D90A60D00F8E72A /* Models */,
 				538183511D907A9900F8E72A /* AppDelegate.swift */,
 				538183531D907A9900F8E72A /* ViewController.swift */,
@@ -246,6 +259,7 @@
 				5381835A1D907A9900F8E72A /* LaunchScreen.storyboard */,
 				5381835D1D907A9900F8E72A /* Info.plist */,
 				5381839D1D907D1C00F8E72A /* Router.swift */,
+				53E653D51D9DF85800C53B15 /* DashboardViewController.swift */,
 			);
 			path = perception_ios;
 			sourceTree = "<group>";
@@ -375,6 +389,7 @@
 				TargetAttributes = {
 					5381834D1D907A9800F8E72A = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q3Q7QT67NG;
 						ProvisioningStyle = Automatic;
 					};
 					538183611D907A9900F8E72A = {
@@ -527,6 +542,7 @@
 			files = (
 				5381835C1D907A9900F8E72A /* LaunchScreen.storyboard in Resources */,
 				538183591D907A9900F8E72A /* Assets.xcassets in Resources */,
+				537F71EF1D9F030B007BD60A /* perception.png in Resources */,
 				538183571D907A9900F8E72A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -554,6 +570,7 @@
 			files = (
 				538183A11D90A61900F8E72A /* User.swift in Sources */,
 				538183541D907A9900F8E72A /* ViewController.swift in Sources */,
+				53E653D61D9DF85800C53B15 /* DashboardViewController.swift in Sources */,
 				5381839E1D907D1C00F8E72A /* Router.swift in Sources */,
 				538183521D907A9900F8E72A /* AppDelegate.swift in Sources */,
 			);
@@ -716,11 +733,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q3Q7QT67NG;
 				INFOPLIST_FILE = perception_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.perception-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -729,11 +748,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q3Q7QT67NG;
 				INFOPLIST_FILE = perception_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.perception-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
