@@ -20,12 +20,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let image = UIImage(named: "perception.png")
         var imageView = UIImageView(frame: self.view.bounds)
+        txtUsername.backgroundColor = UIColor(white: 1, alpha: 0.2)
+        txtPassword.backgroundColor = UIColor(white: 1, alpha: 0.2)
         imageView.image = image
         self.view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
+        
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        self.view.addGestureRecognizer(tap)
        
     }
-
+    func dismissKeyboard(){
+        self.view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

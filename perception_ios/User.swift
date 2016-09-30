@@ -40,6 +40,7 @@ class User {
     func parse(json: Any? ){
         let values = JSON(json)
         self.auht_token = values["token"].stringValue
+        
 
     }
 }
