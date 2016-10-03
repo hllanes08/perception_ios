@@ -7,12 +7,15 @@
 //
 
 import UIKit
-
+import KeychainSwift
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var lbWelcome: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let keyChain = KeychainSwift()
+        var key = keyChain.getData("username")
+        lbWelcome.text = " Welcome  \(key)"
         // Do any additional setup after loading the view.
     }
 

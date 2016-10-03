@@ -11,7 +11,7 @@ import Alamofire
 
 enum TodoRouter:  URLRequestConvertible {
     
-    static let baseURL = URL(string: "https://p3rception.herokuapp.com/api")
+    static let baseURL = URL(string: "http://localhost:3000//api/v1")
     
     case Items
     case Login(User)
@@ -28,7 +28,7 @@ enum TodoRouter:  URLRequestConvertible {
         case .Items:
             return ("/items/",nil)
         case .Login(let user):
-            return ("auth/authorize/", ["username": (user.getUserName() as AnyObject), "password": (user.getPassword() as AnyObject)])
+            return ("/sessions", ["session[email]": (user.getEmail() as AnyObject), "session[password]": (user.getPassword() as AnyObject)])
         }
     }
     var url : URL! { return TodoRouter.baseURL?.appendingPathComponent(route.path) }

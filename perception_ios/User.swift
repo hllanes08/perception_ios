@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftyJSON
+import KeychainSwift
 
 class User {
     
@@ -16,10 +17,10 @@ class User {
     private var password :String
     private var email :String
     private var auht_token :String
-    init(username:String, password: String){
-        self.username  = username
+    init(email:String, password: String){
+        self.username  = ""
         self.password = password
-        self.email = ""
+        self.email = email
         self.auht_token = ""
     }
     func setToken(auth_token:String){
@@ -39,8 +40,11 @@ class User {
     }
     func parse(json: Any? ){
         let values = JSON(json)
-        self.auht_token = values["token"].stringValue
-        
+        self.auht_token = values["auth_token"].stringValue
+        let keyChain = KeychainSwift()
+        keyChain.set(self.auht_token, forKey: "auth_token")
+        //keyChain.set(values["username"].stringValue, forKey: "username")
+
 
     }
 }

@@ -20,8 +20,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let image = UIImage(named: "perception.png")
         var imageView = UIImageView(frame: self.view.bounds)
-        txtUsername.backgroundColor = UIColor(white: 1, alpha: 0.2)
-        txtPassword.backgroundColor = UIColor(white: 1, alpha: 0.2)
+        var bottomLineUsername = CALayer()
+        var bottomLinePassword = CALayer()
+        
+        bottomLineUsername.frame = CGRect(x: 0.0, y: txtUsername.frame.height - 1, width: txtUsername.frame.width, height: 1)
+        bottomLineUsername.backgroundColor = UIColor.white.cgColor
+        
+        bottomLinePassword.frame = CGRect(x: 0.0, y: txtPassword.frame.height - 1, width: txtPassword.frame.width, height: 1)
+        bottomLinePassword.backgroundColor = UIColor.white.cgColor
+        
+        txtUsername.backgroundColor = UIColor(white: 1, alpha: 0)
+        txtUsername.layer.addSublayer(bottomLineUsername)
+        txtPassword.backgroundColor = UIColor(white: 1, alpha: 0)
+        txtPassword.layer.addSublayer(bottomLinePassword)
         imageView.image = image
         self.view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
@@ -43,15 +54,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClickLogin(_ sender: AnyObject) {
-        let username:String = txtUsername.text as String!
+        let email:String = txtUsername.text as String!
         let password:String = txtPassword.text as String!
-        let user = User(username: username, password: password)
+        let user = User(email: email, password: password)
          Alamofire.request(TodoRouter.Login(user))
          .responseJSON { (response) in
             switch response.result {
             case .success:
                 if let value = response.result.value {
-                     let has_errors = JSON(value)["non_field_errors"].exists() || JSON(value)["password"].exists() || JSON(value)["username"].stringValue == ""
+                     //let has_errors = JSON(value)["non_field_errors"].exists() || JSON(value)["password"].exists() || JSON(value)["username"].stringValue == ""
+                    let has_errors = JSON(value)["errors"].exists()
                     if !has_errors {
                         user.parse(json: value)
                         let dashboardController = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewControllerIdentifier") as? DashboardViewController
@@ -59,7 +71,7 @@ class ViewController: UIViewController {
                         self.present(dashboardController!, animated: true, completion: nil)
                     }
                     else {
-                        let alertError = UIAlertController(title: "Login Failed", message: "Wrong username or password", preferredStyle: UIAlertControllerStyle.alert)
+                        let alertError = UIAlertController(title: "Login Failed", message: "Wrong email or password", preferredStyle: UIAlertControllerStyle.alert)
                         let cancelAction = UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel) { (action) in
                             self.dismiss(animated: true, completion: nil)
                         }
