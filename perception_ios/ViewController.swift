@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var btLogin: UIButton!
+    var overlay: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,10 @@ class ViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tap)
+        
+        overlay = UIView(frame: view.frame)
+        overlay!.backgroundColor = UIColor.black
+        overlay!.alpha = 0.8
        
     }
     func dismissKeyboard(){
@@ -57,6 +62,9 @@ class ViewController: UIViewController {
         let email:String = txtUsername.text as String!
         let password:String = txtPassword.text as String!
         let user = User(email: email, password: password)
+        
+        view.addSubview(self.overlay!)
+        
          Alamofire.request(TodoRouter.Login(user))
          .responseJSON { (response) in
             switch response.result {
@@ -79,13 +87,16 @@ class ViewController: UIViewController {
                         self.present(alertError, animated: true, completion: nil)
                     }
                 }
+                self.overlay!.removeFromSuperview()
             case .failure(let error):
                 let alertFailre = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
                 let cancelAction = UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel) { (action) in
                     self.dismiss(animated: true, completion: nil)
                 }
                 alertFailre.addAction(cancelAction)
-                self.present(alertFailre, animated: true, completion: nil)            }
+                self.present(alertFailre, animated: true, completion: nil)
+                self.overlay!.removeFromSuperview()
+            }
           }
         
     }
