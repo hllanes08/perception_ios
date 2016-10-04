@@ -8,16 +8,16 @@
 
 import Foundation
 import Alamofire
-
+import KeychainSwift
 enum TodoRouter:  URLRequestConvertible {
     
-    static let baseURL = URL(string: "http://pitonisa.herokuapp.com/api/v1")
+    static let baseURL = URL(string: "http://localhost:3000/api/v1")
     
-    case Items
+    case Searches
     case Login(User)
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .Items:
+        case .Searches:
             return Alamofire.HTTPMethod.get
         case .Login:
             return Alamofire.HTTPMethod.post
@@ -25,8 +25,8 @@ enum TodoRouter:  URLRequestConvertible {
     }
     var route : (path: String, parameters: [String: AnyObject]?) {
         switch self {
-        case .Items:
-            return ("/items/",nil)
+        case .Searches:
+            return ("/searches/",nil)
         case .Login(let user):
             return ("/sessions", ["session[email]": (user.getEmail() as AnyObject), "session[password]": (user.getPassword() as AnyObject)])
         }
@@ -35,6 +35,10 @@ enum TodoRouter:  URLRequestConvertible {
  
     func asURLRequest() throws -> URLRequest {
         var request = URLRequest(url: url)
+        let auth_token = KeychainSwift().get("auth_token")
+        if(auth_token != nil){
+            request.setValue(auth_token , forHTTPHeaderField: "Authorization")
+        }
         request.httpMethod = method.rawValue
         return try! Alamofire
             .URLEncoding()

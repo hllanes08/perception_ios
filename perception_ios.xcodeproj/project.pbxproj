@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5318C7D61DA435BD00FDEECA /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; };
 		5318C7D71DA435BD00FDEECA /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5339EAD31DA4484A00CF92DD /* PopularizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */; };
+		5339EAEB1DA4577100CF92DD /* Searches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339EAEA1DA4577100CF92DD /* Searches.swift */; };
 		537F71EF1D9F030B007BD60A /* perception.png in Resources */ = {isa = PBXBuildFile; fileRef = 537F71EE1D9F030B007BD60A /* perception.png */; };
 		538183521D907A9900F8E72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183511D907A9900F8E72A /* AppDelegate.swift */; };
 		538183541D907A9900F8E72A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183531D907A9900F8E72A /* ViewController.swift */; };
@@ -236,6 +238,9 @@
 
 /* Begin PBXFileReference section */
 		5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
+		5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularizeViewController.swift; sourceTree = "<group>"; };
+		5339EAE91DA455E500CF92DD /* perception_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = perception_ios.entitlements; sourceTree = "<group>"; };
+		5339EAEA1DA4577100CF92DD /* Searches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Searches.swift; sourceTree = "<group>"; };
 		537F71EE1D9F030B007BD60A /* perception.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perception.png; sourceTree = "<group>"; };
 		5381834E1D907A9800F8E72A /* perception_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perception_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538183511D907A9900F8E72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -334,6 +339,7 @@
 		538183501D907A9900F8E72A /* perception_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5339EAE91DA455E500CF92DD /* perception_ios.entitlements */,
 				537F71DE1D9EE935007BD60A /* Images */,
 				5381839F1D90A60D00F8E72A /* Models */,
 				538183511D907A9900F8E72A /* AppDelegate.swift */,
@@ -344,6 +350,7 @@
 				5381835D1D907A9900F8E72A /* Info.plist */,
 				5381839D1D907D1C00F8E72A /* Router.swift */,
 				53E653D51D9DF85800C53B15 /* DashboardViewController.swift */,
+				5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */,
 			);
 			path = perception_ios;
 			sourceTree = "<group>";
@@ -384,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				538183A01D90A61900F8E72A /* User.swift */,
+				5339EAEA1DA4577100CF92DD /* Searches.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -476,6 +484,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q3Q7QT67NG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					538183611D907A9900F8E72A = {
 						CreatedOnToolsVersion = 8.0;
@@ -716,8 +729,10 @@
 				538183A11D90A61900F8E72A /* User.swift in Sources */,
 				538183541D907A9900F8E72A /* ViewController.swift in Sources */,
 				53E653D61D9DF85800C53B15 /* DashboardViewController.swift in Sources */,
+				5339EAEB1DA4577100CF92DD /* Searches.swift in Sources */,
 				5381839E1D907D1C00F8E72A /* Router.swift in Sources */,
 				538183521D907A9900F8E72A /* AppDelegate.swift in Sources */,
+				5339EAD31DA4484A00CF92DD /* PopularizeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +898,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = perception_ios/perception_ios.entitlements;
 				DEVELOPMENT_TEAM = Q3Q7QT67NG;
 				INFOPLIST_FILE = perception_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -898,6 +914,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = perception_ios/perception_ios.entitlements;
 				DEVELOPMENT_TEAM = Q3Q7QT67NG;
 				INFOPLIST_FILE = perception_ios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
