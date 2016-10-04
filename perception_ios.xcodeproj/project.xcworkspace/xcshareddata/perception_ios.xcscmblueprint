@@ -4,14 +4,16 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
     "C3D2D646AB713D4AC5359A2C251F65BADD48F682" : 9223372036854775807,
+    "B407E115AAB6B76CCF911B22A8BD2354697B6A18" : 9223372036854775807,
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
     "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A619F043-AD5E-4737-AFBD-7BD684A05EF8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "perception_ios\/SwiftyJSON\/",
     "C3D2D646AB713D4AC5359A2C251F65BADD48F682" : "perception_ios\/",
+    "B407E115AAB6B76CCF911B22A8BD2354697B6A18" : "perception_ios\/keychain-swift\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "perception_ios\/SwiftyJSON\/",
     "67620B5EFA902936DF04070AF595B76AB0333747" : "perception_ios\/Alamofire\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "perception_ios",
@@ -22,6 +24,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/marketplacer\/keychain-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B407E115AAB6B76CCF911B22A8BD2354697B6A18"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/hllanes\/perception_ios.git",

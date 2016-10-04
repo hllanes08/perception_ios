@@ -74,9 +74,10 @@ class ViewController: UIViewController {
                     let has_errors = JSON(value)["errors"].exists()
                     if !has_errors {
                         user.parse(json: value)
-                        let dashboardController = self.storyboard?.instantiateViewController(withIdentifier: "DashboardViewControllerIdentifier") as? DashboardViewController
+                        let tabController = self.storyboard?.instantiateViewController(withIdentifier: "UITabBarControllerIndetifier") as? UITabBarController
+                        tabController?.selectedIndex = 0
                         //dashboardController?.navigationController?.pushViewController(dashboardController!, animated: true)
-                        self.present(dashboardController!, animated: true, completion: nil)
+                        self.present(tabController!, animated: true, completion: nil)
                     }
                     else {
                         let alertError = UIAlertController(title: "Login Failed", message: "Wrong email or password", preferredStyle: UIAlertControllerStyle.alert)

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5318C7D61DA435BD00FDEECA /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; };
+		5318C7D71DA435BD00FDEECA /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		537F71EF1D9F030B007BD60A /* perception.png in Resources */ = {isa = PBXBuildFile; fileRef = 537F71EE1D9F030B007BD60A /* perception.png */; };
-		537F72281D9F0E9D007BD60A /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F72191D9F0E50007BD60A /* KeychainSwift.framework */; };
-		537F72291D9F0E9D007BD60A /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 537F72191D9F0E50007BD60A /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		538183521D907A9900F8E72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183511D907A9900F8E72A /* AppDelegate.swift */; };
 		538183541D907A9900F8E72A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538183531D907A9900F8E72A /* ViewController.swift */; };
 		538183571D907A9900F8E72A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 538183551D907A9900F8E72A /* Main.storyboard */; };
@@ -27,65 +27,65 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		537F72181D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7C01DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7ED6C96C1B1C118F00FE8090;
 			remoteInfo = KeychainSwift;
 		};
-		537F721A1D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7C21DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 232B4C7A1BC29950001F2B7A;
 			remoteInfo = "KeychainSwift-macOS";
 		};
-		537F721C1D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7C41DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 232B4C8A1BC29984001F2B7A;
 			remoteInfo = "KeychainSwift-watchOS";
 		};
-		537F721E1D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7C61DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 23E785601BDA410C00B7564A;
 			remoteInfo = "KeychainSwift-tvOS";
 		};
-		537F72201D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7C81DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7ED6C9771B1C118F00FE8090;
 			remoteInfo = KeychainSwiftTests;
 		};
-		537F72221D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7CA1DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7ED6C99D1B1C133500FE8090;
 			remoteInfo = Demo;
 		};
-		537F72241D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7CC1DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7E3A6B601D3F62C2007C5B1F;
 			remoteInfo = "macOS Tests";
 		};
-		537F72261D9F0E50007BD60A /* PBXContainerItemProxy */ = {
+		5318C7CE1DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 7E3A6B7B1D3F6779007C5B1F;
 			remoteInfo = "macOS Demo";
 		};
-		537F722A1D9F0E9D007BD60A /* PBXContainerItemProxy */ = {
+		5318C7D81DA435BD00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 7ED6C96B1B1C118F00FE8090;
 			remoteInfo = KeychainSwift;
@@ -225,7 +225,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				537F72291D9F0E9D007BD60A /* KeychainSwift.framework in Embed Frameworks */,
+				5318C7D71DA435BD00FDEECA /* KeychainSwift.framework in Embed Frameworks */,
 				53D97F9D1D9C8374005602C0 /* SwiftyJSON.framework in Embed Frameworks */,
 				538183991D907C9300F8E72A /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -235,8 +235,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		537F71EE1D9F030B007BD60A /* perception.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perception.png; sourceTree = "<group>"; };
-		537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		5381834E1D907A9800F8E72A /* perception_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = perception_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		538183511D907A9900F8E72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		538183531D907A9900F8E72A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537F72281D9F0E9D007BD60A /* KeychainSwift.framework in Frameworks */,
+				5318C7D61DA435BD00FDEECA /* KeychainSwift.framework in Frameworks */,
 				53D97F9C1D9C8374005602C0 /* SwiftyJSON.framework in Frameworks */,
 				538183981D907C9300F8E72A /* Alamofire.framework in Frameworks */,
 			);
@@ -285,6 +285,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5318C7AE1DA4356A00FDEECA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */,
+				5318C7C31DA4356A00FDEECA /* KeychainSwift.framework */,
+				5318C7C51DA4356A00FDEECA /* KeychainSwift.framework */,
+				5318C7C71DA4356A00FDEECA /* KeychainSwift.framework */,
+				5318C7C91DA4356A00FDEECA /* KeychainSwiftTests.xctest */,
+				5318C7CB1DA4356A00FDEECA /* Keychain Swift.app */,
+				5318C7CD1DA4356A00FDEECA /* macOS Tests.xctest */,
+				5318C7CF1DA4356A00FDEECA /* macOS Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		537F71DE1D9EE935007BD60A /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,25 +308,10 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		537F720D1D9F0E4B007BD60A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				537F72191D9F0E50007BD60A /* KeychainSwift.framework */,
-				537F721B1D9F0E50007BD60A /* KeychainSwift.framework */,
-				537F721D1D9F0E50007BD60A /* KeychainSwift.framework */,
-				537F721F1D9F0E50007BD60A /* KeychainSwift.framework */,
-				537F72211D9F0E50007BD60A /* KeychainSwiftTests.xctest */,
-				537F72231D9F0E50007BD60A /* Keychain Swift.app */,
-				537F72251D9F0E50007BD60A /* macOS Tests.xctest */,
-				537F72271D9F0E50007BD60A /* macOS Demo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		538183451D907A9800F8E72A = {
 			isa = PBXGroup;
 			children = (
-				537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */,
+				5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */,
 				53D97F841D9C8365005602C0 /* SwiftyJSON.xcodeproj */,
 				5381837F1D907C7C00F8E72A /* Alamofire.xcodeproj */,
 				538183501D907A9900F8E72A /* perception_ios */,
@@ -372,7 +372,7 @@
 				5381838B1D907C7D00F8E72A /* Alamofire.framework */,
 				5381838D1D907C7D00F8E72A /* Alamofire iOS Tests.xctest */,
 				5381838F1D907C7D00F8E72A /* Alamofire.framework */,
-				538183911D907C7D00F8E72A /* Alamofire macOS Tests.xctest */,
+				538183911D907C7D00F8E72A /* Alamofire OSX Tests.xctest */,
 				538183931D907C7D00F8E72A /* Alamofire.framework */,
 				538183951D907C7D00F8E72A /* Alamofire tvOS Tests.xctest */,
 				538183971D907C7D00F8E72A /* Alamofire.framework */,
@@ -419,7 +419,7 @@
 			dependencies = (
 				5381839B1D907C9300F8E72A /* PBXTargetDependency */,
 				53D97F9F1D9C8374005602C0 /* PBXTargetDependency */,
-				537F722B1D9F0E9D007BD60A /* PBXTargetDependency */,
+				5318C7D91DA435BD00FDEECA /* PBXTargetDependency */,
 			);
 			name = perception_ios;
 			productName = perception_ios;
@@ -506,8 +506,8 @@
 					ProjectRef = 5381837F1D907C7C00F8E72A /* Alamofire.xcodeproj */;
 				},
 				{
-					ProductGroup = 537F720D1D9F0E4B007BD60A /* Products */;
-					ProjectRef = 537F720C1D9F0E4B007BD60A /* KeychainSwift.xcodeproj */;
+					ProductGroup = 5318C7AE1DA4356A00FDEECA /* Products */;
+					ProjectRef = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 				},
 				{
 					ProductGroup = 53D97F851D9C8365005602C0 /* Products */;
@@ -524,60 +524,60 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		537F72191D9F0E50007BD60A /* KeychainSwift.framework */ = {
+		5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeychainSwift.framework;
-			remoteRef = 537F72181D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7C01DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F721B1D9F0E50007BD60A /* KeychainSwift.framework */ = {
+		5318C7C31DA4356A00FDEECA /* KeychainSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeychainSwift.framework;
-			remoteRef = 537F721A1D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7C21DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F721D1D9F0E50007BD60A /* KeychainSwift.framework */ = {
+		5318C7C51DA4356A00FDEECA /* KeychainSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeychainSwift.framework;
-			remoteRef = 537F721C1D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7C41DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F721F1D9F0E50007BD60A /* KeychainSwift.framework */ = {
+		5318C7C71DA4356A00FDEECA /* KeychainSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = KeychainSwift.framework;
-			remoteRef = 537F721E1D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7C61DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F72211D9F0E50007BD60A /* KeychainSwiftTests.xctest */ = {
+		5318C7C91DA4356A00FDEECA /* KeychainSwiftTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = KeychainSwiftTests.xctest;
-			remoteRef = 537F72201D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7C81DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F72231D9F0E50007BD60A /* Keychain Swift.app */ = {
+		5318C7CB1DA4356A00FDEECA /* Keychain Swift.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "Keychain Swift.app";
-			remoteRef = 537F72221D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7CA1DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F72251D9F0E50007BD60A /* macOS Tests.xctest */ = {
+		5318C7CD1DA4356A00FDEECA /* macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "macOS Tests.xctest";
-			remoteRef = 537F72241D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7CC1DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		537F72271D9F0E50007BD60A /* macOS Demo.app */ = {
+		5318C7CF1DA4356A00FDEECA /* macOS Demo.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "macOS Demo.app";
-			remoteRef = 537F72261D9F0E50007BD60A /* PBXContainerItemProxy */;
+			remoteRef = 5318C7CE1DA4356A00FDEECA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5381838B1D907C7D00F8E72A /* Alamofire.framework */ = {
@@ -601,10 +601,10 @@
 			remoteRef = 5381838E1D907C7D00F8E72A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		538183911D907C7D00F8E72A /* Alamofire macOS Tests.xctest */ = {
+		538183911D907C7D00F8E72A /* Alamofire OSX Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Alamofire macOS Tests.xctest";
+			path = "Alamofire OSX Tests.xctest";
 			remoteRef = 538183901D907C7D00F8E72A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -740,10 +740,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		537F722B1D9F0E9D007BD60A /* PBXTargetDependency */ = {
+		5318C7D91DA435BD00FDEECA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeychainSwift;
-			targetProxy = 537F722A1D9F0E9D007BD60A /* PBXContainerItemProxy */;
+			targetProxy = 5318C7D81DA435BD00FDEECA /* PBXContainerItemProxy */;
 		};
 		538183641D907A9900F8E72A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
