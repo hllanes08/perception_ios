@@ -17,6 +17,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     var searches:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Searches"
         getSearches()
         // Do any additional setup after loading the view.
     }
@@ -31,7 +32,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel!.text  = self.searches[indexPath.row]
+        cell.textLabel!.text  = self.searches[indexPath.row].capitalized
         return cell
     }
     
