@@ -126,7 +126,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="OCK-CF-K62">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.14374342560768127" green="0.17923834919929504" blue="0.24153497815132141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.1437222957611084" green="0.17913702130317688" blue="0.24557149410247803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="dQt-Ok-9gc" kind="relationship" relationship="viewControllers" id="XhV-L3-bSk"/>

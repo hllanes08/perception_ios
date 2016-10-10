@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5312E7891DAC38FA00E34134 /* FontAwesome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5312E7761DAC38E600E34134 /* FontAwesome.framework */; };
+		5312E78A1DAC38FA00E34134 /* FontAwesome.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5312E7761DAC38E600E34134 /* FontAwesome.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5318C7D61DA435BD00FDEECA /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; };
 		5318C7D71DA435BD00FDEECA /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5339EAD31DA4484A00CF92DD /* PopularizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */; };
@@ -29,6 +31,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5312E7751DAC38E600E34134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8401A8D21B39601400269D14;
+			remoteInfo = FontAwesome;
+		};
+		5312E7771DAC38E600E34134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8401A8DD1B39601400269D14;
+			remoteInfo = FontAwesomeTests;
+		};
+		5312E7791DAC38E600E34134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 848937F91C6AF0660085F6D1;
+			remoteInfo = "FontAwesome-watchOS";
+		};
+		5312E78B1DAC38FA00E34134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8401A8D11B39601400269D14;
+			remoteInfo = FontAwesome;
+		};
 		5318C7C01DA4356A00FDEECA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
@@ -228,6 +258,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				5318C7D71DA435BD00FDEECA /* KeychainSwift.framework in Embed Frameworks */,
+				5312E78A1DAC38FA00E34134 /* FontAwesome.framework in Embed Frameworks */,
 				53D97F9D1D9C8374005602C0 /* SwiftyJSON.framework in Embed Frameworks */,
 				538183991D907C9300F8E72A /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -237,6 +268,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FontAwesome.xcodeproj; path = FontAwesome.swift/FontAwesome.xcodeproj; sourceTree = "<group>"; };
 		5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularizeViewController.swift; sourceTree = "<group>"; };
 		5339EAE91DA455E500CF92DD /* perception_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = perception_ios.entitlements; sourceTree = "<group>"; };
@@ -268,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5318C7D61DA435BD00FDEECA /* KeychainSwift.framework in Frameworks */,
+				5312E7891DAC38FA00E34134 /* FontAwesome.framework in Frameworks */,
 				53D97F9C1D9C8374005602C0 /* SwiftyJSON.framework in Frameworks */,
 				538183981D907C9300F8E72A /* Alamofire.framework in Frameworks */,
 			);
@@ -290,6 +323,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5312E7691DAC38E600E34134 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5312E7761DAC38E600E34134 /* FontAwesome.framework */,
+				5312E7781DAC38E600E34134 /* FontAwesomeTests.xctest */,
+				5312E77A1DAC38E600E34134 /* FontAwesome.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5318C7AE1DA4356A00FDEECA /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +359,7 @@
 		538183451D907A9800F8E72A = {
 			isa = PBXGroup;
 			children = (
+				5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */,
 				5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */,
 				53D97F841D9C8365005602C0 /* SwiftyJSON.xcodeproj */,
 				5381837F1D907C7C00F8E72A /* Alamofire.xcodeproj */,
@@ -428,6 +472,7 @@
 				5381839B1D907C9300F8E72A /* PBXTargetDependency */,
 				53D97F9F1D9C8374005602C0 /* PBXTargetDependency */,
 				5318C7D91DA435BD00FDEECA /* PBXTargetDependency */,
+				5312E78C1DAC38FA00E34134 /* PBXTargetDependency */,
 			);
 			name = perception_ios;
 			productName = perception_ios;
@@ -519,6 +564,10 @@
 					ProjectRef = 5381837F1D907C7C00F8E72A /* Alamofire.xcodeproj */;
 				},
 				{
+					ProductGroup = 5312E7691DAC38E600E34134 /* Products */;
+					ProjectRef = 5312E7681DAC38E600E34134 /* FontAwesome.xcodeproj */;
+				},
+				{
 					ProductGroup = 5318C7AE1DA4356A00FDEECA /* Products */;
 					ProjectRef = 5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */;
 				},
@@ -537,6 +586,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5312E7761DAC38E600E34134 /* FontAwesome.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FontAwesome.framework;
+			remoteRef = 5312E7751DAC38E600E34134 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5312E7781DAC38E600E34134 /* FontAwesomeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FontAwesomeTests.xctest;
+			remoteRef = 5312E7771DAC38E600E34134 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5312E77A1DAC38E600E34134 /* FontAwesome.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FontAwesome.framework;
+			remoteRef = 5312E7791DAC38E600E34134 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -755,6 +825,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5312E78C1DAC38FA00E34134 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesome;
+			targetProxy = 5312E78B1DAC38FA00E34134 /* PBXContainerItemProxy */;
+		};
 		5318C7D91DA435BD00FDEECA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KeychainSwift;

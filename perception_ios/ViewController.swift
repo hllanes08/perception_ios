@@ -70,12 +70,14 @@ class ViewController: UIViewController {
             switch response.result {
             case .success:
                 if let value = response.result.value {
-                     //let has_errors = JSON(value)["non_field_errors"].exists() || JSON(value)["password"].exists() || JSON(value)["username"].stringValue == ""
                     let has_errors = JSON(value)["errors"].exists()
                     if !has_errors {
                         user.parse(json: value)
                         let tabController = self.storyboard?.instantiateViewController(withIdentifier: "UITabBarControllerIndetifier") as? UITabBarController
+                        
                         tabController?.selectedIndex = 0
+                        
+                        
                         //dashboardController?.navigationController?.pushViewController(dashboardController!, animated: true)
                         self.present(tabController!, animated: true, completion: nil)
                     }
