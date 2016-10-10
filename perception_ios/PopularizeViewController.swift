@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import FontAwesome
 class PopularizeViewController: UIViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
+    let backgroundColor = UIColor(red: 28/255, green: 33/255, blue: 42/255, alpha: 1)
+    let viewBackgroundColor = UIColor(red: 37/255, green: 46/255, blue: 62/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = viewBackgroundColor
+        self.tabBarItem.image = UIImage.fontAwesomeIconWithName(FontAwesome.Fire, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
+        
         // Do any additional setup after loading the view.
     }
 

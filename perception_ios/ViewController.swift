@@ -62,7 +62,16 @@ class ViewController: UIViewController {
         let email:String = txtUsername.text as String!
         let password:String = txtPassword.text as String!
         let user = User(email: email, password: password)
-        
+        if(email.isEmpty || password.isEmpty){
+            let alertEmpty = UIAlertController(title: "Error", message: "User or Password are required", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel) { (action) in
+                self.dismiss(animated: true, completion: nil)
+            }
+            alertEmpty.addAction(cancelAction)
+            self.present(alertEmpty, animated: true, completion: nil)
+
+        }
+        else{
         view.addSubview(self.overlay!)
         
          Alamofire.request(TodoRouter.Login(user))
@@ -101,6 +110,7 @@ class ViewController: UIViewController {
                 self.overlay!.removeFromSuperview()
             }
           }
+        }
         
     }
 }
