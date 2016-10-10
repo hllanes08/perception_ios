@@ -71,7 +71,7 @@
         <!--Popularize-->
         <scene sceneID="LfJ-V3-aK1">
             <objects>
-                <viewController id="Zdq-lt-qPU" sceneMemberID="viewController">
+                <viewController id="Zdq-lt-qPU" customClass="PopularizeViewController" customModule="perception_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TGg-bc-t53"/>
                         <viewControllerLayoutGuide type="bottom" id="rVL-ny-Rmv"/>
