@@ -16,7 +16,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var tableSearches: UITableView!
     @IBOutlet weak var lbWelcome: UILabel!
-    var searches:[String] = []
+    var searches = [[String:String]]()
     let backgroundColor = UIColor(red: 28/255, green: 33/255, blue: 42/255, alpha: 1)
     let viewBackgroundColor = UIColor(red: 37/255, green: 46/255, blue: 62/255, alpha: 1)
     override func viewDidLoad() {
@@ -64,7 +64,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
                     let value = response.result.value
                     let values = JSON(value)
                     for index in 0...values.count {
-                        self.searches.append(values[index][0]["tag"].stringValue)
+                        self.searches.append([values[index][0]["tag"].stringValue,values[index][0]["value"].stringValue])
                     }
                     self.refreshTable()
                 case .failure(let error):
@@ -86,9 +86,9 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
             switch response.result {
             case .success:
                  var tags =  JSON(response.result.value)
-                 self.searches = []
+                 self.searches
                  for value in tags.dictionary! {
-                    self.searches.append(value.key)
+                    self.searches.append([value.key, value.value.stringValue)
                 }
                 self.tableSearches.reloadData()
 
