@@ -69,7 +69,6 @@ class ViewController: UIViewController {
             }
             alertEmpty.addAction(cancelAction)
             self.present(alertEmpty, animated: true, completion: nil)
-
         }
         else{
         view.addSubview(self.overlay!)
@@ -85,8 +84,6 @@ class ViewController: UIViewController {
                         let tabController = self.storyboard?.instantiateViewController(withIdentifier: "UITabBarControllerIndetifier") as? UITabBarController
                         
                         tabController?.selectedIndex = 0
-                        
-                        
                         //dashboardController?.navigationController?.pushViewController(dashboardController!, animated: true)
                         self.present(tabController!, animated: true, completion: nil)
                     }

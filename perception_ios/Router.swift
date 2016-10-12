@@ -15,12 +15,15 @@ enum TodoRouter:  URLRequestConvertible {
     
     case Searches
     case Login(User)
+    case SearchKey(String)
     var method: Alamofire.HTTPMethod {
         switch self {
         case .Searches:
             return Alamofire.HTTPMethod.get
         case .Login:
             return Alamofire.HTTPMethod.post
+        case .SearchKey:
+            return Alamofire.HTTPMethod.get
         }
     }
     var route : (path: String, parameters: [String: AnyObject]?) {
@@ -29,6 +32,8 @@ enum TodoRouter:  URLRequestConvertible {
             return ("/searches/",nil)
         case .Login(let user):
             return ("/sessions", ["session[email]": (user.getEmail() as AnyObject), "session[password]": (user.getPassword() as AnyObject)])
+        case .SearchKey(let key):
+            return ("/sites/1/popularize_by_key", ["key": (key as AnyObject)])
         }
     }
     var url : URL! { return TodoRouter.baseURL?.appendingPathComponent(route.path) }

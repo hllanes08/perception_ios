@@ -11,7 +11,7 @@ import Alamofire
 import KeychainSwift
 import  SwiftyJSON
 import FontAwesome
-class DashboardViewController: UIViewController, UITableViewDataSource {
+class DashboardViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var tableSearches: UITableView!
@@ -25,7 +25,10 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
         self.tabBarItem.image = UIImage.fontAwesomeIconWithName(FontAwesome.Search, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
         self.view.backgroundColor = viewBackgroundColor
         tableSearches.backgroundColor = backgroundColor
-        searchbar.backgroundColor = backgroundColor
+        searchbar.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
 
@@ -43,6 +46,10 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
         cell.textLabel!.text  = self.searches[indexPath.row].capitalized
         cell.textLabel?.backgroundColor = backgroundColor
         cell.textLabel?.textColor = UIColor.white
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = viewBackgroundColor
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     
@@ -72,6 +79,26 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
     }
     func refreshTable(){
         self.tableSearches.reloadData()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        Alamofire.request(TodoRouter.SearchKey(searchbar.text!))
+        .responseJSON { (response) in
+            switch response.result {
+            case .success:
+                 var tags =  JSON(response.result.value)
+                 self.searches = []
+                 for value in tags.dictionary! {
+                    self.searches.append(value.key)
+                }
+                self.tableSearches.reloadData()
+
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    func dismissKeyboard(){
+        self.searchbar.endEditing(true)
     }
     /*
     // MARK: - Navigation
