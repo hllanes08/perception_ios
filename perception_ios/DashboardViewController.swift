@@ -13,6 +13,7 @@ import  SwiftyJSON
 import FontAwesome
 class DashboardViewController: UIViewController, UITableViewDataSource {
     
+    @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var tableSearches: UITableView!
     @IBOutlet weak var lbWelcome: UILabel!
     var searches:[String] = []
@@ -24,6 +25,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
         self.tabBarItem.image = UIImage.fontAwesomeIconWithName(FontAwesome.Search, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
         self.view.backgroundColor = viewBackgroundColor
         tableSearches.backgroundColor = backgroundColor
+        searchbar.backgroundColor = backgroundColor
         // Do any additional setup after loading the view.
     }
 
@@ -55,7 +57,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource {
                     let value = response.result.value
                     let values = JSON(value)
                     for index in 0...values.count {
-                        self.searches.append(values[index]["tag"].stringValue)
+                        self.searches.append(values[index][0]["tag"].stringValue)
                     }
                     self.refreshTable()
                 case .failure(let error):
