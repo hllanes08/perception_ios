@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var btLogin: UIButton!
-    var overlay: UIView?
+    var webView: UIOverlayView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +41,7 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tap)
         
-        overlay = UIView(frame: view.frame)
-        overlay!.backgroundColor = UIColor.black
-        overlay!.alpha = 0.8
+        self.webView = UIOverlayView(frame: self.view.frame)
        
     }
     func dismissKeyboard(){
@@ -71,7 +69,7 @@ class ViewController: UIViewController {
             self.present(alertEmpty, animated: true, completion: nil)
         }
         else{
-        view.addSubview(self.overlay!)
+            self.view.addSubview(webView!)
         
          Alamofire.request(TodoRouter.Login(user))
          .responseJSON { (response) in
@@ -96,7 +94,7 @@ class ViewController: UIViewController {
                         self.present(alertError, animated: true, completion: nil)
                     }
                 }
-                self.overlay!.removeFromSuperview()
+                self.webView!.removeFromSuperview()
             case .failure(let error):
                 let alertFailre = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
                 let cancelAction = UIAlertAction(title:"Cancel", style: UIAlertActionStyle.cancel) { (action) in
@@ -104,7 +102,7 @@ class ViewController: UIViewController {
                 }
                 alertFailre.addAction(cancelAction)
                 self.present(alertFailre, animated: true, completion: nil)
-                self.overlay!.removeFromSuperview()
+                self.webView!.removeFromSuperview()
             }
           }
         }
