@@ -16,20 +16,25 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
     @IBOutlet weak var searchbar: UISearchBar!
     @IBOutlet weak var tableSearches: UITableView!
     @IBOutlet weak var lbWelcome: UILabel!
+    var loading: UIOverlayView?
     var searches = [String:String]()
     let backgroundColor = UIColor(red: 28/255, green: 33/255, blue: 42/255, alpha: 1)
     let viewBackgroundColor = UIColor(red: 37/255, green: 46/255, blue: 62/255, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loading = UIOverlayView(frame: self.view.frame)
+        self.view.addSubview(loading!)
         getSearches()
+        self.loading?.removeFromSuperview()
         self.tabBarItem.image = UIImage.fontAwesomeIconWithName(FontAwesome.Search, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
         self.view.backgroundColor = viewBackgroundColor
         tableSearches.backgroundColor = backgroundColor
         searchbar.delegate = self
         
+        
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
+              // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +87,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
         self.tableSearches.reloadData()
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.addSubview(self.loading!)
         Alamofire.request(TodoRouter.SearchKey(searchbar.text!))
         .responseJSON { (response) in
             switch response.result {
@@ -92,9 +98,10 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
                     self.searches[value.key] = value.value.stringValue
                 }
                 self.tableSearches.reloadData()
-
+                self.loading?.removeFromSuperview()
             case .failure(let error):
                 print(error)
+                self.loading?.removeFromSuperview()
             }
         }
     }

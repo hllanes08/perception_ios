@@ -21,6 +21,7 @@ class UIOverlayView: UIWebView {
         catch let error{
             print(error)
         }
+        self.backgroundColor = UIColor(white: 1, alpha: 0.5)
     }
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
