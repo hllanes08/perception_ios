@@ -22,6 +22,7 @@ class UIOverlayView: UIWebView {
             print(error)
         }
         self.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        self.center = CGPoint(x: frame.size.width/2, y: frame.height/2)
     }
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
