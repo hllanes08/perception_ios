@@ -21,11 +21,18 @@ class UIOverlayView: UIWebView {
         catch let error{
             print(error)
         }
-        self.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        self.center = CGPoint(x: frame.size.width/2, y: frame.height/2)
+        self.backgroundColor = UIColor(red: 37/255, green: 46/255, blue: 62/255, alpha: 0)
+        self.scrollView.backgroundColor = UIColor(red: 37/255, green: 46/255, blue: 62/255, alpha: 0.5)
+        self.isOpaque = false
+        self.scrollView.isOpaque = false
+        self.frame = UIScreen.main.bounds
+        let insets = UIEdgeInsets(top: self.frame.height/4, left: 0,bottom:0, right: 0)
+        self.scrollView.contentInset = insets
+        self.scrollView.scrollIndicatorInsets = insets
     }
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
     }
+    
     
 }
