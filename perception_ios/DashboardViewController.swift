@@ -30,6 +30,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
         self.view.backgroundColor = viewBackgroundColor
         tableSearches.backgroundColor = backgroundColor
         searchbar.delegate = self
+        self.tableSearches.estimatedRowHeight = 50
         
         
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -56,6 +57,16 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
         cell.selectedBackgroundView = backgroundView
         cell.detailTextLabel?.text = Array(self.searches.values)[indexPath.row  ]
         cell.detailTextLabel?.textColor = UIColor.white
+        //Image
+        let url = URL(string: "http://res.cloudinary.com/perception/image/upload/r_max,w_100,h_100/v1476825441/lion-03_ijiume.jpg")
+        do{
+            let imageData = try Data(contentsOf: url!)
+            cell.imageView?.image = UIImage(data: imageData)
+            cell.imageView?.backgroundColor = UIColor.clear
+        }
+        catch let error{
+            print(error)
+        }
         return cell
     }
     

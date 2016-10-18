@@ -6,6 +6,11 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>res.cloudinary.com</key>
+			<dict>
+				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>pitonisa.herokuapp.com</key>
 			<dict>
 				<key>NSThirdPartyExceptionAllowsInsecureHTTPLoads</key>
