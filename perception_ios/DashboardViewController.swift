@@ -30,9 +30,10 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
         self.view.backgroundColor = viewBackgroundColor
         tableSearches.backgroundColor = backgroundColor
         searchbar.delegate = self
-        self.tableSearches.estimatedRowHeight = 50
-        
-        
+        self.tableSearches.estimatedRowHeight = 68
+        self.tableSearches.rowHeight = UITableViewAutomaticDimension
+        self.tableSearches.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableSearches.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tap)
               // Do any additional setup after loading the view.
@@ -48,8 +49,9 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+        cell.layoutMargins = UIEdgeInsets(top: 15, left: 0,bottom:15, right: 0)
         cell.backgroundColor = backgroundColor
-        cell.textLabel!.text  = Array(self.searches.keys)[indexPath.row]
+        cell.textLabel!.text  = Array(self.searches.keys)[indexPath.row].capitalized
         cell.textLabel?.backgroundColor = backgroundColor
         cell.textLabel?.textColor = UIColor.white
         let backgroundView = UIView()
@@ -62,8 +64,9 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
         do{
             let imageData = try Data(contentsOf: url!)
             cell.imageView?.image = UIImage(data: imageData)
+            cell.imageView?.frame = CGRect(x: 10, y: 10, width: 68, height: 68)
             cell.imageView?.backgroundColor = UIColor.clear
-            cell.imageView?.layer.cornerRadius = 30
+            cell.imageView?.layer.cornerRadius = 23
             cell.imageView?.clipsToBounds = true
         }
         catch let error{
