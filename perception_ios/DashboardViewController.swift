@@ -63,6 +63,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
             let imageData = try Data(contentsOf: url!)
             cell.imageView?.image = UIImage(data: imageData)
             cell.imageView?.backgroundColor = UIColor.clear
+            cell.imageView?.layer.cornerRadius = 30
+            cell.imageView?.clipsToBounds = true
         }
         catch let error{
             print(error)
