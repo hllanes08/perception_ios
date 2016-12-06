@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16DC644C1DF67A8900968C75 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 16DC644B1DF67A8900968C75 /* loading.gif */; };
 		5318C7D61DA435BD00FDEECA /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; };
 		5318C7D71DA435BD00FDEECA /* KeychainSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5318C7C11DA4356A00FDEECA /* KeychainSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5339EAD31DA4484A00CF92DD /* PopularizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */; };
@@ -29,7 +30,6 @@
 		53D97F9C1D9C8374005602C0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D97F8F1D9C8366005602C0 /* SwiftyJSON.framework */; };
 		53D97F9D1D9C8374005602C0 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53D97F8F1D9C8366005602C0 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53E653D61D9DF85800C53B15 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E653D51D9DF85800C53B15 /* DashboardViewController.swift */; };
-		53F63D5B1DBC7BE9005FBF49 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 53F63D5A1DBC7BE9005FBF49 /* loading.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +270,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		16DC644B1DF67A8900968C75 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../Documents/loading.gif; sourceTree = "<group>"; };
 		5318C7AD1DA4356A00FDEECA /* KeychainSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KeychainSwift.xcodeproj; path = "keychain-swift/KeychainSwift.xcodeproj"; sourceTree = "<group>"; };
 		5339EAD21DA4484A00CF92DD /* PopularizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularizeViewController.swift; sourceTree = "<group>"; };
 		5339EAE91DA455E500CF92DD /* perception_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = perception_ios.entitlements; sourceTree = "<group>"; };
@@ -295,7 +296,6 @@
 		53A6253F1DB45FF300B64CA4 /* FontAwesome.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FontAwesome.xcodeproj; path = FontAwesome.swift/FontAwesome.xcodeproj; sourceTree = "<group>"; };
 		53D97F841D9C8365005602C0 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		53E653D51D9DF85800C53B15 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
-		53F63D5A1DBC7BE9005FBF49 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = loading.gif; path = ../../../../../Users/Harvin/Desktop/loading.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,7 +345,7 @@
 		537F71DE1D9EE935007BD60A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				53F63D5A1DBC7BE9005FBF49 /* loading.gif */,
+				16DC644B1DF67A8900968C75 /* loading.gif */,
 				537F71EE1D9F030B007BD60A /* perception.png */,
 			);
 			name = Images;
@@ -784,7 +784,7 @@
 			files = (
 				5381835C1D907A9900F8E72A /* LaunchScreen.storyboard in Resources */,
 				538183591D907A9900F8E72A /* Assets.xcassets in Resources */,
-				53F63D5B1DBC7BE9005FBF49 /* loading.gif in Resources */,
+				16DC644C1DF67A8900968C75 /* loading.gif in Resources */,
 				537F71EF1D9F030B007BD60A /* perception.png in Resources */,
 				538183571D907A9900F8E72A /* Main.storyboard in Resources */,
 			);

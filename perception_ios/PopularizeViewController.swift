@@ -16,7 +16,7 @@ class PopularizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = viewBackgroundColor
-        self.tabBarItem.image = UIImage.fontAwesomeIconWithName(FontAwesome.Fire, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
+        self.tabBarItem.image = UIImage.fontAwesomeIcon(name: FontAwesome.fire, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
         
         // Do any additional setup after loading the view.
     }

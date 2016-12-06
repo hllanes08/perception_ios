@@ -26,7 +26,7 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
         self.view.addSubview(loading!)
         getSearches()
         self.loading?.removeFromSuperview()
-        self.tabBarItem.image = UIImage.fontAwesomeIconWithName(FontAwesome.Search, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
+        self.tabBarItem.image = UIImage.fontAwesomeIcon(name: FontAwesome.search, textColor: UIColor.black , size: CGSize(width: 30, height: 30 ))
         self.view.backgroundColor = viewBackgroundColor
         tableSearches.backgroundColor = backgroundColor
         searchbar.delegate = self
