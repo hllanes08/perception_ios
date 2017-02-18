@@ -11,8 +11,9 @@ import Alamofire
 import KeychainSwift
 enum TodoRouter:  URLRequestConvertible {
     
-    static let baseURL = URL(string: "http://pitonisa.herokuapp.com/api/v1")
-    
+    //static let baseURL = URL(string: "http://localhost:3000/api/v1")
+    //static let baseURL = URL(string: "https://pitonisa.herokuapp.com/api")
+    static let baseURL = URL(string: "http://localhost:8000/api")
     case Searches
     case Login(User)
     case SearchKey(String)
@@ -23,7 +24,7 @@ enum TodoRouter:  URLRequestConvertible {
         case .Login:
             return Alamofire.HTTPMethod.post
         case .SearchKey:
-            return Alamofire.HTTPMethod.get
+            return Alamofire.HTTPMethod.post
         }
     }
     var route : (path: String, parameters: [String: AnyObject]?) {
@@ -31,9 +32,9 @@ enum TodoRouter:  URLRequestConvertible {
         case .Searches:
             return ("/searches/",nil)
         case .Login(let user):
-            return ("/sessions", ["session[email]": (user.getEmail() as AnyObject), "session[password]": (user.getPassword() as AnyObject)])
+            return ("/auth/authorize", ["username": (user.getEmail() as AnyObject), "password": (user.getPassword() as AnyObject)])
         case .SearchKey(let key):
-            return ("/sites/1/popularize_by_key", ["key": (key as AnyObject)])
+            return ("/popularize/", ["key": (key as AnyObject)])
         }
     }
     var url : URL! { return TodoRouter.baseURL?.appendingPathComponent(route.path) }
@@ -41,8 +42,8 @@ enum TodoRouter:  URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         var request = URLRequest(url: url)
         let auth_token = KeychainSwift().get("auth_token")
-        if(auth_token != nil){
-            request.setValue(auth_token , forHTTPHeaderField: "Authorization")
+        if(auth_token != nil && auth_token != ""){
+            request.setValue("Token \(auth_token!)" , forHTTPHeaderField: "Authorization")
         }
         request.httpMethod = method.rawValue
         return try! Alamofire

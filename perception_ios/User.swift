@@ -40,7 +40,7 @@ class User {
     }
     func parse(json: Any? ){
         let values = JSON(json)
-        self.auht_token = values["user"]["auth_token"].stringValue
+        self.auht_token = values["token"].stringValue
         let keyChain = KeychainSwift()
         keyChain.set(self.auht_token, forKey: "auth_token")
         //keyChain.set(values["username"].stringValue, forKey: "username")

@@ -85,8 +85,10 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
                 case .success:
                     let value = response.result.value
                     let values = JSON(value)
-                    for index in 0...values["searches"].count {
-                        self.searches[(values["searches"][index]["tag"].stringValue)] = values["searches"][index]["value"].stringValue
+                    for index in 0...values.count {
+                        if(values[index]["value"].stringValue != ""){
+                          self.searches[(values[index]["tag"].stringValue)] = values[index]["value"].stringValue
+                        }
                     }
                     self.refreshTable()
                 case .failure(let error):
@@ -110,8 +112,8 @@ class DashboardViewController: UIViewController, UITableViewDataSource, UISearch
             case .success:
                  var tags =  JSON(response.result.value)
                  self.searches.removeAll()
-                 for value in tags.dictionary! {
-                    self.searches[value.key] = value.value.stringValue
+                 for value in tags {
+                    self.searches[value.1[0].stringValue] = value.1[1].stringValue
                 }
                 self.tableSearches.reloadData()
                 self.loading?.removeFromSuperview()
